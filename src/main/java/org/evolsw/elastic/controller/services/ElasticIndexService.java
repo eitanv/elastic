@@ -4,4 +4,6 @@ public interface ElasticIndexService {
     void createIndex();
 
     boolean isIndexNotCreated();
+
+    void deleteIndex();
 }

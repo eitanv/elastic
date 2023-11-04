@@ -20,8 +20,7 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
     public void createIndex() {
 
         IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
-        if (isIndexCreated)
-            return;
+        if (isIndexCreated) return;
         indexOperations.delete();
         indexOperations.create();
         isIndexCreated = true;
@@ -29,5 +28,13 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
 
     public boolean isIndexNotCreated() {
         return !isIndexCreated;
+    }
+
+    @Override
+    public void deleteIndex() {
+        IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
+        indexOperations.delete();
+        isIndexCreated = false;
+
     }
 }

@@ -49,4 +49,10 @@ public class DocumentController {
         return document.map(vDocument -> new ResponseEntity<>(vDocument, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.OK));
     }
 
+    @PostMapping("/index/delete")
+    ResponseEntity<String> deleteIndex() {
+        elasticIndexService.deleteIndex();
+        return new ResponseEntity<>("Deleted", HttpStatus.OK);
+    }
+
 }
