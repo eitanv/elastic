@@ -1,0 +1,265 @@
+{
+  "version": "7.7.6",
+  "timestamp": 1699721003902,
+  "projects": [
+    {
+      "name": "Elastic",
+      "documents": [
+        {
+          "type": "project",
+          "folderIds": [],
+          "name": "Elastic",
+          "selectedEnvironmentId": null,
+          "selectedFolderId": "19ab1554-2b21-4709-91f2-8261a5db8b0f",
+          "selectedSidebarTab": null,
+          "selectedTabId": "fa7b42c6-3804-4149-8a3b-ef8360a54722",
+          "sidebarWidth": null,
+          "createdAt": 1699718470083,
+          "updatedAt": 1699718470083,
+          "id": "09ad4230-e98d-431c-af2f-2ac545133a86",
+          "selectedRequestId": "6e6943ce-9c13-41a6-8ef6-58ba9c93980c",
+          "sidebarView": "requests"
+        },
+        {
+          "type": "tab",
+          "title": "Welcome",
+          "view": "Welcome",
+          "createdAt": 1699718470134,
+          "updatedAt": 1699718470134,
+          "id": "4c5faeef-89ea-428e-b005-8f1e0501150b"
+        },
+        {
+          "type": "folder",
+          "name": "My Folder",
+          "description": null,
+          "collapsed": false,
+          "selectedEnvironmentId": null,
+          "requestIds": [
+            "ec28c88b-8340-471f-b31b-0563629cca10",
+            "2c7a2fc0-fc23-4a57-b30b-627583cf6389",
+            "6e6943ce-9c13-41a6-8ef6-58ba9c93980c"
+          ],
+          "createdAt": 1699719431715,
+          "updatedAt": 1699719431715,
+          "id": "19ab1554-2b21-4709-91f2-8261a5db8b0f"
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "19ab1554-2b21-4709-91f2-8261a5db8b0f",
+          "name": "create index",
+          "url": "http://localhost:9201/documents/index",
+          "method": "POST",
+          "bodyType": null,
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "text/plain;charset=UTF-8",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-length",
+                "value": "7"
+              },
+              {
+                "name": "content-type",
+                "value": "text/plain;charset=UTF-8"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 11 Nov 2023 16:40:04 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              }
+            ],
+            "responseText": "Created",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 405,
+            "size": "7 bytes",
+            "sentRequest": {
+              "id": "ec28c88b-8340-471f-b31b-0563629cca10",
+              "method": "POST",
+              "url": "http://localhost:9201/documents/index",
+              "headers": {},
+              "data": null,
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1699719431765,
+          "updatedAt": 1699719431765,
+          "id": "ec28c88b-8340-471f-b31b-0563629cca10",
+          "_inProgress": false,
+          "_rename": false
+        },
+        {
+          "type": "tab",
+          "requestId": "ec28c88b-8340-471f-b31b-0563629cca10",
+          "title": "Request1",
+          "view": "HttpClient",
+          "createdAt": 1699719431779,
+          "updatedAt": 1699719431779,
+          "id": "988aa5b7-ef12-4cb1-b9e1-7e122c1e646b"
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "19ab1554-2b21-4709-91f2-8261a5db8b0f",
+          "name": "Get document",
+          "url": "http://localhost:9201/documents/1",
+          "method": "GET",
+          "bodyType": null,
+          "bodyXml": "",
+          "bodyJson": "",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "application/json",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 11 Nov 2023 16:42:55 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              }
+            ],
+            "responseText": "{\"id\":\"1\",\"content\":\"Text of document 1\"}",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 79,
+            "size": "41 bytes",
+            "sentRequest": {
+              "id": "6e6943ce-9c13-41a6-8ef6-58ba9c93980c",
+              "method": "GET",
+              "url": "http://localhost:9201/documents/1",
+              "headers": {},
+              "data": null,
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1699720833058,
+          "updatedAt": 1699720833058,
+          "id": "6e6943ce-9c13-41a6-8ef6-58ba9c93980c",
+          "_inProgress": false,
+          "_rename": false
+        },
+        {
+          "type": "request",
+          "projectId": null,
+          "folderId": "19ab1554-2b21-4709-91f2-8261a5db8b0f",
+          "name": "Add document",
+          "url": "http://localhost:9201/documents/document",
+          "method": "POST",
+          "bodyType": "json",
+          "bodyXml": "",
+          "bodyJson": "{\n    \"id\" : \"1\",\n    \"content\" : \"Text of document 1\"\n}",
+          "bodyText": "",
+          "authType": null,
+          "response": {
+            "contentType": "text/plain;charset=UTF-8",
+            "headers": [
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              },
+              {
+                "name": "content-length",
+                "value": "1"
+              },
+              {
+                "name": "content-type",
+                "value": "text/plain;charset=UTF-8"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 11 Nov 2023 16:42:23 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              }
+            ],
+            "responseText": "1",
+            "statusCode": 200,
+            "statusText": "",
+            "duration": 460,
+            "size": "1 bytes",
+            "sentRequest": {
+              "id": "2c7a2fc0-fc23-4a57-b30b-627583cf6389",
+              "method": "POST",
+              "url": "http://localhost:9201/documents/document",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "data": "{\n    \"id\" : \"1\",\n    \"content\" : \"Text of document 1\"\n}",
+              "multipart": null
+            }
+          },
+          "reqTabIndex": 0,
+          "resTabIndex": 0,
+          "description": null,
+          "reqPanelSize": null,
+          "resPanelSize": null,
+          "spec": null,
+          "createdAt": 1699719431765,
+          "updatedAt": 1699719431765,
+          "id": "2c7a2fc0-fc23-4a57-b30b-627583cf6389",
+          "_inProgress": false,
+          "_rename": false,
+          "previewMode": false
+        },
+        {
+          "type": "tab",
+          "requestId": "2c7a2fc0-fc23-4a57-b30b-627583cf6389",
+          "title": "create index_copy",
+          "view": "HttpClient",
+          "createdAt": 1699720860556,
+          "updatedAt": 1699720860556,
+          "id": "7d1299ee-69b4-4b3a-afa8-17026aca4302"
+        },
+        {
+          "type": "tab",
+          "requestId": "6e6943ce-9c13-41a6-8ef6-58ba9c93980c",
+          "title": "Request2",
+          "view": "HttpClient",
+          "createdAt": 1699720948819,
+          "updatedAt": 1699720948819,
+          "id": "fa7b42c6-3804-4149-8a3b-ef8360a54722"
+        }
+      ]
+    }
+  ]
+}
