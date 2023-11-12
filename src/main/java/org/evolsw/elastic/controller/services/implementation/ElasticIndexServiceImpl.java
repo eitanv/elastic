@@ -22,7 +22,7 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
         if (isIndexCreated)
             return;
         IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
-        synchronized (isIndexCreated) {
+        synchronized (this) {
             indexOperations.delete();
             indexOperations.create();
             isIndexCreated = true;
@@ -36,7 +36,7 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
     @Override
     public void deleteIndex() {
         IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
-        synchronized (isIndexCreated) {
+        synchronized (this) {
             indexOperations.delete();
             isIndexCreated = false;
         }
