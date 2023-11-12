@@ -1,7 +1,7 @@
 package org.evolsw.elastic.controller.services.implementation;
 
-import org.evolsw.elastic.controller.data.VDocument;
 import org.evolsw.elastic.controller.services.ElasticIndexService;
+import org.evolsw.elastic.model.VDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.IndexOperations;
@@ -14,16 +14,19 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
     @Autowired
     private ElasticsearchOperations elasticsearchOperations;
 
-    private boolean isIndexCreated = false;
+    private Boolean isIndexCreated = false;
 
     @Override
     public void createIndex() {
 
+        if (isIndexCreated)
+            return;
         IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
-        if (isIndexCreated) return;
-        indexOperations.delete();
-        indexOperations.create();
-        isIndexCreated = true;
+        synchronized (isIndexCreated) {
+            indexOperations.delete();
+            indexOperations.create();
+            isIndexCreated = true;
+        }
     }
 
     public boolean isIndexNotCreated() {
@@ -33,8 +36,10 @@ public class ElasticIndexServiceImpl implements ElasticIndexService {
     @Override
     public void deleteIndex() {
         IndexOperations indexOperations = elasticsearchOperations.indexOps(VDocument.class);
-        indexOperations.delete();
-        isIndexCreated = false;
+        synchronized (isIndexCreated) {
+            indexOperations.delete();
+            isIndexCreated = false;
+        }
 
     }
 }

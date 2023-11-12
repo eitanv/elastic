@@ -1,12 +1,10 @@
 package org.evolsw.elastic.controller.services;
 
-import org.evolsw.elastic.controller.data.VDocument;
-
-import java.util.Optional;
+import org.evolsw.elastic.controller.data.VDocumentDTO;
 
 public interface DocumentService {
 
-    void addDocument(VDocument doc);
+    void addDocument(VDocumentDTO doc);
 
-    Optional<VDocument> getDocument(String id);
+    VDocumentDTO getDocument(String id);
 }

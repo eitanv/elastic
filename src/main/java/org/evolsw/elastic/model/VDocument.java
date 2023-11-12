@@ -1,4 +1,4 @@
-package org.evolsw.elastic.controller.data;
+package org.evolsw.elastic.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
